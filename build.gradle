@@ -5,12 +5,17 @@ plugins {
 
 repositories {
     jcenter()
+    maven {
+        url 'https://yuuuu51.github.io/DijkstraLib'
+    }
 }
 
 dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    implementation "com.beust:klaxon:5.2"
+    implementation 'io.github.yuuuu51:DijkstraLib:1.0.0'
 }
 
 application {
-    mainClassName = 'io.github.yuuuu51.MainKt'
+    mainClassName = 'io.github.yuuuu51.dijkstrasample.MainKt'
 }
