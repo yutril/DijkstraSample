@@ -36,6 +36,6 @@ fun main(args: Array<String>) {
 
 fun loadJson(path: String): JsonObject {
     val klaxon = Klaxon()
-    val br = Files.newBufferedReader(Paths.get(klaxon::class.java.getResource(path).path))
-    return klaxon.parseJsonObject(br)
+    val reader = klaxon::class.java.getResourceAsStream(path).bufferedReader()
+    return klaxon.parseJsonObject(reader)
 }
