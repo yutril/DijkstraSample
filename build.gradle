@@ -13,7 +13,7 @@ repositories {
 dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
     implementation "com.beust:klaxon:5.2"
-    implementation 'io.github.yuuuu51:DijkstraLib:1.0.0'
+    implementation 'io.github.yuuuu51:DijkstraLib:1.+'
 }
 
 jar {
