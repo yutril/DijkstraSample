@@ -6,8 +6,6 @@ import io.github.yuuuu51.dijkstralib.DijkstraLib
 import io.github.yuuuu51.dijkstralib.element.Edge
 import io.github.yuuuu51.dijkstralib.element.ElementFactory
 import io.github.yuuuu51.dijkstralib.element.Node
-import java.nio.file.Files
-import java.nio.file.Paths
 
 const val START_NODE_ID = "1"
 const val GOAL_NODE_ID = "8"
@@ -15,7 +13,7 @@ const val GOAL_NODE_ID = "8"
 fun main(args: Array<String>) {
     val edges = mutableMapOf<String, Edge>()
     loadJson("/edges.json").forEach {(id, length) ->
-        check(length is Int)
+        check(length is Double)
         edges[id] = ElementFactory.createEdge(id, length)
     }
     val nodes = mutableMapOf<String, Node>()
